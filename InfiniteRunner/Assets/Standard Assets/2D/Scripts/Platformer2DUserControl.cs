@@ -48,16 +48,16 @@ namespace UnityStandardAssets._2D
             // Read the inputs.
             Console.WriteLine(inlet.lastSample.Length);
             //uncomment crouch for EEG
-            //bool crouch = Input.GetKey(KeyCode.LeftControl);
+            bool crouch = Input.GetKey(KeyCode.LeftControl);
 
-            if (inlet.lastSample.Length < 0)
-            {
-                crouch = true;
-            }
-            else
-            {
-                crouch = false;
-            }
+        //    if (inlet.lastSample.Length < 0)
+        //    {
+        //        crouch = true;
+        //    }
+        //    else
+        //    {
+        //        crouch = false;
+        //    }
             //float h = CrossPlatformInputManager.GetAxis("Horizontal");
             // Pass all parameters to the character control script.
 
