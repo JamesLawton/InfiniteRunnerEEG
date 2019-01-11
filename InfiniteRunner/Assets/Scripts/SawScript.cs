@@ -1,18 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+using Assets.LSL4Unity.Scripts;
+using Assets.LSL4Unity.Scripts.Examples;
 
-public class SawScript : MonoBehaviour {
 
-	// Use this for initialization
-
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public class SawScript : MonoBehaviour
     {
-        if (other.tag == "Player")
+
+        //public PlatformerCharacter2D m_Character;
+
+
+        public void OnTriggerEnter2D(Collider2D other)
         {
-            Application.LoadLevel(1);
-            return;
+            if (other.tag == "Player")
+            {
+                //m_Character = GetComponent<PlatformerCharacter2D>();
+                //m_Character.DecreaseSpeed(1);
+
+            }
         }
     }
-}
+
