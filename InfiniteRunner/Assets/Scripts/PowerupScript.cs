@@ -12,8 +12,9 @@ public class PowerupScript : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            print("Powerup was hit by the player");
+            other.gameObject.SendMessage("HitPowerup");
             hud = GameObject.Find("Main Camera").GetComponent<HudScript>();
-            hud.IncreaseScore(10);
             Destroy(this.gameObject);
         }
     }

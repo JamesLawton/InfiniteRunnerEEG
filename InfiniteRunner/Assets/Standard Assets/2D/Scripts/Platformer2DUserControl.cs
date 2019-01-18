@@ -31,7 +31,7 @@ namespace UnityStandardAssets._2D
             if (!m_Jump)
             {
                 // if (inlet.lastSample.Length > 0)
-                if (inlet.lastSample[0] > 5000)
+                if (inlet.lastSample[0] > 4000)
                 {
                     m_Jump = true;
                     //Console.WriteLine(inlet.lastSample.Length);
@@ -43,6 +43,15 @@ namespace UnityStandardAssets._2D
             }
         }
 
+        public void HitSaw ()
+        {
+            m_Character.DecreaseSpeed();
+        }
+
+        public void HitPowerup()
+        {
+            m_Character.IncreaseSpeed();
+        }
 
         private void FixedUpdate()
         {
@@ -63,7 +72,6 @@ namespace UnityStandardAssets._2D
             // Pass all parameters to the character control script.
 
 
-               
 
 
 

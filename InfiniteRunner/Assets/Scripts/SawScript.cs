@@ -15,10 +15,12 @@ using Assets.LSL4Unity.Scripts.Examples;
         {
             if (other.tag == "Player")
             {
-                //m_Character = GetComponent<PlatformerCharacter2D>();
-                //m_Character.DecreaseSpeed(1);
+            print("Saw was hit by the player");
+            other.gameObject.SendMessage("HitSaw");
+            //m_Character = GetComponent<PlatformerCharacter2D>();
+            //m_Character.DecreaseSpeed(1);
 
-            }
+        }
         }
     }
 
