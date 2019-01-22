@@ -56,7 +56,9 @@
      <Compile Include="Assets\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
+     <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl_Player2.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
+     <Compile Include="Assets\Standard Assets\2D\Scripts\PlatformerCharacter2D_Player2.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Restarter.cs" />
      <Compile Include="Assets\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
      <Compile Include="Assets\Standard Assets\Cameras\Scripts\AutoCam.cs" />
@@ -86,6 +88,7 @@
      <Compile Include="Assets\Standard Assets\LSL4Unity\Scripts\BaseInlet.cs" />
      <Compile Include="Assets\Standard Assets\LSL4Unity\Scripts\Examples\DemoInletForFloatSamples.cs" />
      <Compile Include="Assets\Standard Assets\LSL4Unity\Scripts\Examples\ExampleFloatInlet.cs" />
+     <Compile Include="Assets\Standard Assets\LSL4Unity\Scripts\Examples\Player2FloatInlet.cs" />
      <Compile Include="Assets\Standard Assets\LSL4Unity\Scripts\Examples\ScaleMapping.cs" />
      <Compile Include="Assets\Standard Assets\LSL4Unity\Scripts\Examples\TransformMapping.cs" />
      <Compile Include="Assets\Standard Assets\LSL4Unity\Scripts\LSLCommon.cs" />

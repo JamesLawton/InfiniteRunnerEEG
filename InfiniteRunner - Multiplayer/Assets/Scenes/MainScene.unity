@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moment: 0
-  StreamName: openvibeSignalPlayer2
+  StreamName: openvibeSignal2
   StreamType: 
   lastSample:
   - 0

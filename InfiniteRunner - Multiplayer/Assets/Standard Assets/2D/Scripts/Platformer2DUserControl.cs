@@ -31,7 +31,7 @@ namespace UnityStandardAssets._2D
             if (!m_Jump)
             {
                 //if (inlet.lastSample.Length > 0)
-                if (inlet.lastSample[0] > 4000)
+                if (inlet.lastSample[0] > 1.0)
                 {
                     m_Jump = true;
                     //Console.WriteLine(inlet.lastSample.Length);

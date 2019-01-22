@@ -17,8 +17,6 @@ using Assets.LSL4Unity.Scripts.Examples;
             {
             print("Saw was hit by the player");
             other.gameObject.SendMessage("HitSaw");
-            //m_Character = GetComponent<PlatformerCharacter2D>();
-            //m_Character.DecreaseSpeed(1);
 
         }
         }

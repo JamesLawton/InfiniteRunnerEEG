@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using Assets.LSL4Unity.Scripts;
 using Assets.LSL4Unity.Scripts.Examples;
+using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -31,7 +32,7 @@ namespace UnityStandardAssets._2D
             if (!m_Jump)
             {
                 // if (inlet.lastSample.Length > 0)
-                if (inlet.lastSample[0] > 4000)
+                if (inlet.lastSample[0] > 1.5)
                 {
                     m_Jump = true;
                     //Console.WriteLine(inlet.lastSample.Length);
@@ -50,7 +51,7 @@ namespace UnityStandardAssets._2D
 
         public void HitPowerup()
         {
-            m_Character.IncreaseSpeed();
+            StartCoroutine(m_Character.IncreaseSpeed());
         }
 
         private void FixedUpdate()

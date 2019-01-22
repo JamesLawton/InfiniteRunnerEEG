@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
 namespace UnityStandardAssets._2D
 {
@@ -112,13 +113,17 @@ namespace UnityStandardAssets._2D
 
         public void DecreaseSpeed()
         {          
+            
             m_MaxSpeed = m_MaxSpeed - (float)0.2;
     
         }
 
-        public void IncreaseSpeed()
+        public IEnumerator IncreaseSpeed()
         {
-            m_MaxSpeed = m_MaxSpeed + (float)0.2;
+     
+            m_MaxSpeed = m_MaxSpeed + (float)2.0;
+            yield return new WaitForSeconds(2);
+            m_MaxSpeed = 5.0f;
         }
 
 
