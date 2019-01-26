@@ -63,6 +63,7 @@
      <Compile Include="Assets\Runner\Runner.cs" />
      <Compile Include="Assets\Scripts\CameraRunnerScript.cs" />
      <Compile Include="Assets\Scripts\DestroyerScript.cs" />
+     <Compile Include="Assets\Scripts\EvaluationRestartScript.cs" />
      <Compile Include="Assets\Scripts\FarParallaxScript.cs" />
      <Compile Include="Assets\Scripts\FinishScript.cs" />
      <Compile Include="Assets\Scripts\GameOverScript.cs" />

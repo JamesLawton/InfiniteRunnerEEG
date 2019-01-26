@@ -46,7 +46,7 @@ namespace UnityStandardAssets._2D
 
         public void HitSaw ()
         {
-            m_Character.DecreaseSpeed();
+            StartCoroutine(m_Character.DecreaseSpeed());
         }
 
         public void HitPowerup()
