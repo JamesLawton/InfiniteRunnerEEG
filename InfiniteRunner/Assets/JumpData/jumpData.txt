@@ -1,10 +1,6 @@
-{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[0,0,1,1,2,2,3,3]}{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[0,0,1,1,2,2,3,3]}{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[0,0,1,1,2,3,3]}{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[0,0,1,1,2,3,3]}{"CollectedPowerUps":[],"CollectedSaws":[0,0,1,2,2,3,3]}
-{"CollectedPowerUps":[],"CollectedSaws":[0,0,1,2,2,3,3]}
-{"CollectedPowerUps":[],"CollectedSaws":[0,0,1,2,2,3,3]}
-{"CollectedPowerUps":[],"CollectedSaws":[0,0,1,2,2,3,3]}
-{"CollectedPowerUps":[],"CollectedSaws":[1,1,2,3]}
-{"CollectedPowerUps":[],"CollectedSaws":[1,1,2,3]}
-{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[1,2,2,3]}
-{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[1,2,2,3]}
-{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[1,1,2,2,3,3]}
-{"CollectedPowerUps":[0,1,2,3,4],"CollectedSaws":[1,1,2,2,3,3]}
+{"CollectedPowerUps":[0,0],"CollectedSaws":[0,0]}
+{"CollectedPowerUps":[0,0],"CollectedSaws":[0,0]}
+{"CollectedPowerUps":[0,0],"CollectedSaws":[0,0]}
+{"CollectedPowerUps":[0,0],"CollectedSaws":[0,0]}
+{"CollectedPowerUps":[0,0],"CollectedSaws":[0,0]}
+{"CollectedPowerUps":[0,0],"CollectedSaws":[0,0]}

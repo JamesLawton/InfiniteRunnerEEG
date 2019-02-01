@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HudScript : MonoBehaviour {
 
-    float playerScore = 0;
+    public float playerScore = 0;
 
 	
 	// Update is called once per frame
@@ -23,6 +23,6 @@ public class HudScript : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 100, 30), "Score: " + (int)(playerScore * 100));
+        GUI.Label(new Rect(10, 10, 100, 30), "Score: " + (int)(playerScore));
     }
 }
