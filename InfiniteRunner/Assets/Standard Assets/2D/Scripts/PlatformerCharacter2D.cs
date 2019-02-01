@@ -139,4 +139,7 @@ namespace UnityStandardAssets._2D
             transform.localScale = theScale;
         }
     }
+
+
+
 }
