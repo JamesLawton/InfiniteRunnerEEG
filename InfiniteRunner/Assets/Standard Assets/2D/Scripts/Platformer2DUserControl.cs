@@ -4,6 +4,7 @@ using UnityStandardAssets.CrossPlatformInput;
 using Assets.LSL4Unity.Scripts;
 using Assets.LSL4Unity.Scripts.Examples;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace UnityStandardAssets._2D
 {
@@ -16,7 +17,11 @@ namespace UnityStandardAssets._2D
         private bool m_Jump;
         private ExampleFloatInlet inlet;
         private bool crouch;
+        public AudioClip[] hitSawSound;
+        public AudioClip[] hitPowerupSound;
 
+        public ActorJumpData jumpData;
+        
 
 
 
@@ -24,6 +29,8 @@ namespace UnityStandardAssets._2D
         {
             m_Character = GetComponent<PlatformerCharacter2D>();
             inlet = FindObjectOfType<ExampleFloatInlet>();
+            jumpData = new ActorJumpData();
+            
         }
 
 
@@ -47,11 +54,15 @@ namespace UnityStandardAssets._2D
         public void HitSaw ()
         {
             StartCoroutine(m_Character.DecreaseSpeed());
+            //AudioSource.PlayClipAtPoint(hitSawSound,this.transform.position);
+            AudioSource.PlayClipAtPoint(hitSawSound[UnityEngine.Random.Range(0,hitSawSound.Length)],this.transform.position);
         }
 
         public void HitPowerup()
         {
             StartCoroutine(m_Character.IncreaseSpeed());
+            //AudioSource.PlayClipAtPoint(hitPowerupSound,this.transform.position);
+            AudioSource.PlayClipAtPoint(hitPowerupSound[UnityEngine.Random.Range(0,hitPowerupSound.Length)],this.transform.position);
         }
 
         private void FixedUpdate()
@@ -79,5 +90,27 @@ namespace UnityStandardAssets._2D
             m_Character.Move(1, crouch, m_Jump);
             m_Jump = false;
         }
+
+        
     }
+
+    [Serializable]
+    public class ActorJumpData
+    {
+    //public List<int> CollectedPowerUps = new List<int>();
+    //public List<int> CollectedSaws = new List<int>();
+
+    [HideInInspector]
+    public List<int> CollectedPowerUps;
+    [HideInInspector]
+    public List<int> CollectedSaws;
+
+    public ActorJumpData(){
+        this.CollectedPowerUps = new List<int>();
+        this.CollectedSaws = new List<int>();
+    }
+    }
+
+
+
 }
