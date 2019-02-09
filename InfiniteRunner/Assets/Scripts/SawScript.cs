@@ -18,11 +18,14 @@ using Assets.LSL4Unity.Scripts.Examples;
             print("Saw was hit by the player");
             other.gameObject.SendMessage("HitSaw");
 
+            var hud = GameObject.Find("Main Camera").GetComponent<HudScript>();
+
             // add this powerupID to the Agent-List
             var actorJumpData = other.gameObject.GetComponent<UnityStandardAssets._2D.Platformer2DUserControl>().jumpData;
-            Destroy(this.gameObject);
+            
             actorJumpData.CollectedSaws.Add(sawID);
-
+            actorJumpData.CollectedSaws.Add(hud.playerScore);
+            Destroy(this.gameObject);
 
             
             //foreach (int item in actorJumpData.CollectedSaws) { print (actorJumpData.CollectedSaws[item]); }

@@ -24,6 +24,7 @@ public class PowerupScript : MonoBehaviour {
             var actorJumpData = other.gameObject.GetComponent<UnityStandardAssets._2D.Platformer2DUserControl>().jumpData;
 
             actorJumpData.CollectedPowerUps.Add(powerupID);
+            actorJumpData.CollectedPowerUps.Add(hud.playerScore);
             Destroy(this.gameObject);
             //print(actorJumpData.CollectedPowerUps.ToString());
             //foreach (int item in actorJumpData.CollectedPowerUps) { print (actorJumpData.CollectedPowerUps[item]); }

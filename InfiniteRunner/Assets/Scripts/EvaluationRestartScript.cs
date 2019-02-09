@@ -16,6 +16,7 @@ public class EvaluationRestartScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+             
             var actorJumpData = other.gameObject.GetComponent<UnityStandardAssets._2D.Platformer2DUserControl>().jumpData;
             string json = JsonUtility.ToJson(actorJumpData);
             string path = Application.dataPath + "/JumpData/JumpData.txt";
@@ -31,6 +32,17 @@ public class EvaluationRestartScript : MonoBehaviour
             StreamWriter writer2 = new StreamWriter(path2, true);
             writer2.Write(playerTime + ", \n");
             writer2.Close();
+            
+
+             /*
+            var numberJumps = other.gameObject.GetComponent<UnityStandardAssets._2D.Platformer2DUserControl>().numberJumps;
+            string nJumps = numberJumps.ToString();
+            string path3 = Application.dataPath + "/JumpData/NumberJumps.txt";
+            Debug.Log("AssetPath:" + path3);
+            StreamWriter writer3 = new StreamWriter(path3, true);
+            writer3.Write(nJumps + ", \n");
+            writer3.Close();
+             */
 
 
             SceneManager.LoadScene(2);

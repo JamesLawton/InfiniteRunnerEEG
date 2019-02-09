@@ -22,15 +22,15 @@ namespace UnityStandardAssets._2D
 
         public ActorJumpData jumpData;
         
-
-
+        public int numberJumps;
+        public bool jumpBool;
 
         private void Awake()
         {
             m_Character = GetComponent<PlatformerCharacter2D>();
             inlet = FindObjectOfType<ExampleFloatInlet>();
             jumpData = new ActorJumpData();
-            
+            numberJumps = 0;
         }
 
 
@@ -38,10 +38,19 @@ namespace UnityStandardAssets._2D
         {
             if (!m_Jump)
             {
-                // if (inlet.lastSample.Length > 0)
-                if (inlet.lastSample[0] > 1.5)
+
+                Console.WriteLine(inlet.lastSample.Length);
+                //if (inlet.lastSample[0] > 4.1)
+                
+                //int random_jump = UnityEngine.Random.Range(0,1000);
+
+                
+                //if (random_jump > 974) // 989
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     m_Jump = true;
+                    
+                    jumpBool = true;
                     //Console.WriteLine(inlet.lastSample.Length);
                 }
 
@@ -88,7 +97,14 @@ namespace UnityStandardAssets._2D
 
 
             m_Character.Move(1, crouch, m_Jump);
+            
             m_Jump = false;
+
+            if(jumpBool){
+                numberJumps += 1;
+                jumpBool = false;
+            }
+            
         }
 
         
@@ -101,13 +117,13 @@ namespace UnityStandardAssets._2D
     //public List<int> CollectedSaws = new List<int>();
 
     [HideInInspector]
-    public List<int> CollectedPowerUps;
+    public List<float> CollectedPowerUps;
     [HideInInspector]
-    public List<int> CollectedSaws;
+    public List<float> CollectedSaws;
 
     public ActorJumpData(){
-        this.CollectedPowerUps = new List<int>();
-        this.CollectedSaws = new List<int>();
+        this.CollectedPowerUps = new List<float>();
+        this.CollectedSaws = new List<float>();
     }
     }
 
